@@ -1,0 +1,35 @@
+
+
+Tower of Hanoi - Strategy
+
+Modules:
+
+MAIN
+----
+
+1. setup                # poles and disks. Input number of disks 
+                        # from user. (Via ARGS for practice.)
+
+2. enter_move           # print "Enter from where you'd like to move 
+                        # from and to in the format '1,3'. Enter 'q' to quit." user enters move.  
+
+  2.1 validate_move     # is input = "q"? 
+                        # YES: go to finish. NO: continue  
+                        # is input in format "digit-comma-digit"? 
+                        # YES: convert continue. 
+                        # NO: 
+                        # count and print discs on each pole
+                        # are disks in right order (largest ones lowest)? 
+                        # NO: restore previous layout. print "top disk must be smaller than one underneath. Redo." go back to enter_move.
+                        # YES. continue
+
+  2.2 analyze result    # are all disks on one pole?
+                        # NO. go back to enter_move
+                        # YES. result="win". continue
+
+3. finish game          was 'q' entered? 
+                        # YES. Print "game aborted". NO: continue
+                        was result a win? YES: congratulate winner.
+
+
+ 
